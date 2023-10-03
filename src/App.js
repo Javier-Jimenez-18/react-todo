@@ -1,44 +1,30 @@
 import React from 'react';
 
-const list = [
+const todoList = [
   {
-    title: 'React',
-    url: 'https://reactjs.org/',
-    author: 'Jordan Walke',
-    num_comments: 3,
-    points: 4,
-    objectID: 0,
+    id: 1,
+    title: 'Read "Hello React", "Requirements", "Setting up a React Component", "Meet the React Component", "React JSX", and "Lists in React"',
   }, 
   {
-    title: 'Redux',
-    url: 'https://redux.js.org/',
-    author: 'Dan Abramov, Andrew Clark',
-    num_comments: 2,
-    points: 5,
-    objectID: 1,
+    id: 2,
+    title: 'Complete Lesson 1.1 exercises',
+  },
+  {
+    id: 3,
+    title: 'Git add, commit, and push code from branch lesson_1_1 to GitHub',
   }, 
 ];
 
 function App() {
   return (
     <div>
-      <h1>My Hacker Stories</h1>
-
-      <label htmlFor="search">Search: </label>
-      <input id="search" type="text" />
-
+      <h1>Todo List</h1>
       <hr />
-
       <ul>
-        {list.map(function (item) {
+        {todoList.map(function (item) {
           return (
-            <li key={item.objectID}>
-              <span>
-                <a href={item.url}>{item.title}</a>
-              </span>
-              <span>{item.author}</span>
-              <span>{item.num_comments}</span>
-              <span>{item.points}</span>
+            <li key={item.id}>
+              <span>{item.title}</span>
             </li>  
           );
         })}
