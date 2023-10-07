@@ -25,6 +25,7 @@ function App() {
     <div>
       <h1>My Hacker Stories</h1>
 
+      {/* creating an instance of Search component */}
       <Search />
 
       <hr />
@@ -37,6 +38,7 @@ function App() {
   );
 }
 
+// definition of Search component
 function Search() {
   return (
     <div>
