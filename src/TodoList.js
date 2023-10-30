@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoListItem from './TodoListItem';
 
 const todoList = [
   {
@@ -25,14 +26,24 @@ const todoList = [
     id: 6,
     title: 'Git add, commit, and push code from branch lesson_1_2 to GitHub',
   },
+  {
+    id: 7,
+    title: 'Read "Handler Function in JSX", "React Props", "React State", and "Callback Handlers in JSX"',
+  }, 
+  {
+    id: 8,
+    title: 'Complete Lesson 1.3 exercises',
+  },
+  {
+    id: 9,
+    title: 'Git add, commit, and push code from branch lesson_1_3 to GitHub',
+  },
 ];
 
 const TodoList = () => (
   <ul>
     {todoList.map((item) => (
-      <li key={item.id}>
-        <span>{item.title}</span>
-      </li>
+      <TodoListItem key={item.id} todo={item} />
     ))}
   </ul>  
 );
